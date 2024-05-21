@@ -11,11 +11,15 @@ export const useFecthGigfs = (category) => {
     setImages(newImages);
     setIsLoading(false);
   };
+  const handleDelete = (values) => {
+    setImages(values);
+  };
   useEffect(() => {
     getImages();
   }, []);
   return {
     images,
+    handleDelete,
     isLoading,
   };
 };

@@ -1,6 +1,7 @@
 import { GifItem } from "./GifItem";
 import { useFecthGigfs } from "../hooks/useFecthGigfs";
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 
 export const GifGrid = ({ category }) => {
   const { images, isLoading, handleDelete } = useFecthGigfs(category);
@@ -19,4 +20,8 @@ export const GifGrid = ({ category }) => {
       </div>
     </>
   );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };

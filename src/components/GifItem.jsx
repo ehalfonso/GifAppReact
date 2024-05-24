@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 export const GifItem = ({ title, url, id, remove }) => {
   return (
     <div className="card">
@@ -6,4 +7,9 @@ export const GifItem = ({ title, url, id, remove }) => {
       <button onClick={() => remove(id)}>Eliminar</button>
     </div>
   );
+};
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
